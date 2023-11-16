@@ -1,0 +1,99 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*/ Reset */
+
+/* Common */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header,
+footer {
+    padding: 1.25rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    height: 3.125rem;
+    width: 3.125rem;
+    display: block;
+}
+
+.titolo {
+    display: flex;
+    align-items: center;
+}
+
+.select {
+    background-color: #efefef;
+    padding: .0625rem 1.25rem;
+    border-radius: .125rem;
+}
+
+.btn {
+    padding: 0 1.25rem;
+    cursor: pointer;
+}
+
+main {
+    flex-grow: 1;
+    background-color: #7fffd4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board {
+    height: 37.5rem;
+    width: 37.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    cursor: pointer;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% / 10);
+    width: calc(100% / 10);
+    border: .0625rem solid #000;
+}
+
+.active {
+    background-color: #add8e6;
+}
+
+.cell-normale {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% / 9);
+    width: calc(100% / 9);
+    border: .0625rem solid #000;
+}
+
+.cell-facile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% / 7);
+    width: calc(100% / 7);
+    border: .0625rem solid #000;
+}
