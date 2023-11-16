@@ -38,13 +38,13 @@ playBtn.addEventListener("click", function () {
         dimensioneGriglia = 49;
     }
 
-    // numeri delle bombe generate in base alla difficoltà
+    // bombe generate in base alla difficoltà
     for (let i = 1; i <= 16; i++) {
-        let bombe = Math.floor(Math.random() * dimensioneGriglia);
+        let bombe = Math.floor(Math.random() * dimensioneGriglia + 1);
         listaBombe.push(bombe);
     }
     // Array bombe pieno
-    console.log('Bombe: ' + listaBombe);
+    console.log('Bombe nelle celle: ' + listaBombe);
 
     // Generazione griglia
     for (let i = 1; i <= dimensioneGriglia; i++) {
