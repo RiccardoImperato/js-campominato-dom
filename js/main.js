@@ -17,6 +17,8 @@ const selettoreDifficolta = document.querySelector('.select');
 const playBtn = document.querySelector('.btn');
 // Contenitore griglia
 const board = document.querySelector('.board');
+// Punteggio
+let punteggio = 0;
 
 // Click bottone
 playBtn.addEventListener("click", function () {
@@ -64,10 +66,15 @@ playBtn.addEventListener("click", function () {
         // Click cella
         myElement.addEventListener("click", function () {
             myElement.classList.add('active');
-            console.log('Cella', i);
+            console.log(`Cella ${i}`);
+            punteggio++;
             if (listaBombe.includes(i)) {
+                punteggio = 0;
                 myElement.classList.add('bomba');
-                console.log('Bomba');
+                console.log('Hai Perso!');
+            }
+            else {
+                console.log(`Il tuo Punteggio: ${punteggio}`);
             }
         })
         board.append(myElement);
