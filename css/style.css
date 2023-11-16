@@ -80,6 +80,10 @@ main {
     background-color: #add8e6;
 }
 
+.bomba {
+    background-color: #ff0000;
+}
+
 .cell-normale {
     display: flex;
     justify-content: center;
