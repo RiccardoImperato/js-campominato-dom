@@ -41,10 +41,13 @@ playBtn.addEventListener("click", function () {
     }
 
     // bombe generate in base alla difficoltà
-    for (let i = 1; i <= 16; i++) {
+    while (listaBombe.length < 16) {
         let bombe = Math.floor(Math.random() * dimensioneGriglia + 1);
-        listaBombe.push(bombe);
+
+        if (!listaBombe.includes(bombe))
+            listaBombe.push(bombe);
     }
+
     // Array bombe pieno
     console.log('Bombe nelle celle: ' + listaBombe);
 
@@ -67,17 +70,16 @@ playBtn.addEventListener("click", function () {
         myElement.addEventListener("click", function () {
             myElement.classList.add('active');
             console.log(`Cella ${i}`);
-            punteggio++;
+
             if (listaBombe.includes(i)) {
-                punteggio = 0;
                 myElement.classList.add('bomba');
                 console.log('Hai Perso!');
             }
             else {
+                punteggio++;
                 console.log(`Il tuo Punteggio: ${punteggio}`);
             }
         })
         board.append(myElement);
     }
 });
-

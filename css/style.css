@@ -64,7 +64,6 @@ main {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    cursor: pointer;
 }
 
 .cell {
@@ -74,6 +73,8 @@ main {
     height: calc(100% / 10);
     width: calc(100% / 10);
     border: .0625rem solid #000;
+    cursor: pointer;
+
 }
 
 .active {
@@ -90,7 +91,7 @@ main {
     align-items: center;
     height: calc(100% / 9);
     width: calc(100% / 9);
-    border: .0625rem solid #000;
+    cursor: pointer;
 }
 
 .cell-facile {
@@ -100,4 +101,5 @@ main {
     height: calc(100% / 7);
     width: calc(100% / 7);
     border: .0625rem solid #000;
+    cursor: pointer;
 }
